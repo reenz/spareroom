@@ -7,8 +7,16 @@ import EventDetails from '../../components/EventDetails.js';
 
 
 describe("Event Details",() => {
+  let wrapper;
+  beforeEach(() => {
+    wrapper = shallow(<EventDetails />) ;
+  });
+
+  it("should render 'Home' nav item", () => {  
+    expect(wrapper.text()).toContain("SpeedRoomMating Brooklyn @ Matte Torrey's");
+  });
+
   it("should render event details", () => {
-    const wrapper = shallow(<EventDetails />) 
     expect(wrapper.find('.EventDetails')).toHaveLength(1);
   })
 })
