@@ -1,14 +1,22 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
+import EventDetails from './EventDetails.js';
+import barImage from './bar-photo.jpg';
+import {Route, NavLink, HashRouter} from "react-router-dom";
 
 class NavBar extends Component {
+
+  eventDetails() {}
   render() {
     return (
-      <div className="NavBar">
-        <nav className="NavItems">
-        <a href="#">Home</a>
-        <a href="#">Events</a>
-        </nav>
-      </div>
+      <HashRouter>
+        <div className="NavBar">
+          <NavLink to='/'>Home</NavLink>
+          <NavLink to='/EventDetails'>Events</NavLink>
+          <div className="content">
+            <Route path="/EventDetails" component={EventDetails}/>
+          </div>
+        </div>
+      </HashRouter>
     );
   }
 }
