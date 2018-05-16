@@ -7,8 +7,16 @@ import NavBar from '../../components/Navbar';
 
 
 describe("NavBar",() => {
-  it("should render nav items", () => {
-    const wrapper = shallow(<NavBar />) 
+  let wrapper;
+  beforeEach(() => {
+    wrapper = shallow(<NavBar />);
+  });
+
+  it("should render 'Home' nav item", () => {  
     expect(wrapper.text()).toContain("Home");
-  })
+  });
+
+  it("should render 'Event' nav item", () => {
+    expect(wrapper.text()).toContain("Events");
+  });
 })
