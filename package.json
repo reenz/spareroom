@@ -16,5 +16,14 @@
   "bugs": {
     "url": "https://github.com/reenz/spareroom/issues"
   },
-  "homepage": "https://github.com/reenz/spareroom#readme"
+  "homepage": "https://github.com/reenz/spareroom#readme",
+  "devDependencies": {
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "jest": "^22.4.3",
+    "react-test-renderer": "^16.3.2"
+  },
+  "dependencies": {
+    "npm": "^6.0.1"
+  }
 }
