@@ -25,3 +25,15 @@ My approach is to first break the task into smaller tasks:
 3. Add event image to be displayed when user clicks on Events.
 4. Add event details as header of the event image.
 5. Now add css to the above steps before moving forward to add any other features.
+
+### How to use
+
+* Clone it `git@github.com:reenz/spareroom.git`
+* Run `npm install` to download the dependencies
+* Run `npm start` and it will open in `localhost:3000`
+* Run `npm test` to run the tests
+
+### Comments
+
+* I have used `React` to this task and tested using `Jest` & `Enzyme`
+* I could not complete the task, yesterday evening was spent on fixing the `ENOSPC` error I was getting due to low disk space, then due to some version changes my tests were not running properly I was getting `environment.setup is not a function` error to which I struggled a lot and finally I manually changed all the versions of my dependencies. By the time these issues were fixed it was already 9 p.m. Still I managed to the steps I mentioned in my approach. Looking forward to learn more from this exercise if had more time.
