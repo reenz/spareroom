@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import EventDetails from './EventDetails.js';
-import barImage from './bar-photo.jpg';
 import {Route, NavLink, HashRouter} from "react-router-dom";
+import './NavBar.css'
 
 class NavBar extends Component {
 
@@ -11,6 +11,7 @@ class NavBar extends Component {
       <HashRouter>
         <div className="NavBar">
           <NavLink to='/'>Home</NavLink>
+          <span>  </span>
           <NavLink to='/EventDetails'>Events</NavLink>
           <div className="content">
             <Route path="/EventDetails" component={EventDetails}/>
