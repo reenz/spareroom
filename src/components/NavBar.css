@@ -1,14 +1,16 @@
 .NavBar{
     background-color: #ffffff;
-    color: white;
     font-weight: bold;
     font-family: Arial;
-    padding: 16px 16px;
+    font-size: 16px;
+    margin: 16px 16px;
+    
 }
-
 .content{
     color: #003dfd;
     background-color: white;
     font-weight : bold;
     font-family: sans-serif;
+    display: flex;
 }
+
