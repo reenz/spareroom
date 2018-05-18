@@ -1,25 +1,26 @@
 import React, {Component} from 'react';
 import EventDetails from './EventDetails.js';
-import {Route, NavLink, HashRouter} from "react-router-dom";
+
 import './NavBar.css'
 
-class NavBar extends Component {
+const displayEventDetails = props => props.eventData ? (
+  <EventDetails eventData={props.eventData}/>
+) : null;
 
-  eventDetails() {}
-  render() {
-    return (
-      <HashRouter>
-        <div className="NavBar">
-          <NavLink to='/'>Home</NavLink>
-          <span>  </span>
-          <NavLink to='/EventDetails'>Events</NavLink>
-          <div className="content">
-            <Route path="/EventDetails" component={EventDetails}/>
-          </div>
-        </div>
-      </HashRouter>
-    );
-  }
-}
+const NavBar = props => (
+  
+    <div className="NavBar">
+    <nav>
+      <a href="#">Home</a>
+      <a onClick={props.onClick} href=""></a>
+    </nav>
+      <NavLink to='/'>Home</NavLink>
+      <span>  </span>
+      <NavLink to='/EventDetails'>Events</NavLink>
+      <div className="content">
+        {displayEventDetails(props)}
+      </div>
+    </div>
+);
 
 export default NavBar;
